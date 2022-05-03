@@ -140,5 +140,3 @@ jekyll_compose:
   # path: feed.xml
   # posts_limit: 50
   # tags: true
-
-theme: jekyll-theme-slate
