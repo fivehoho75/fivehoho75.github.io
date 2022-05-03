@@ -1,0 +1,19 @@
+
+<aside class="aside__menu">
+  <h4>All Posts</h4>
+  {% assign categories = site.categories | sort %}
+    {% for category in categories  %}
+    <span class="asie__category">
+        <a href="/tag/{{ category | first | slugify }}/", style="font-size: {{ category | last | size  |  times: 4 | plus: 80 }}%">
+            {{ category[0] | replace:'-', ' ' }} 
+            ({{ category | last | size }})
+        </a>
+    </span><br>
+    {% endfor %}
+    
+    <div class="buymeacoffee">
+        <a href="https://www.buymeacoffee.com/Justin75" target="_blank"><img src="https://img.buymeacoffee.com/api/?url=aHR0cHM6Ly9jZG4uYnV5bWVhY29mZmVlLmNvbS91cGxvYWRzL3Byb2ZpbGVfcGljdHVyZXMvMjAyMi8wNC9mZTRRcDVYT1R4ZmtsSWpWLmpwZWdAMzAwd18wZS53ZWJw&creator=Justin&design_code=1&design_color=%23ff813f&slug=Justin75"></a>
+        <!-- <img src="/images/kpay.jpg" /> -->
+    </div>
+    {% include sponsor.html %}
+</aside>
